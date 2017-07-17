@@ -19,19 +19,19 @@ When this telemetry data is supplied as input, the Telemetry Reporter tool will 
 Input files must be given specific names in order to be automatically ingested by the Telemetry Reporter tool. A sample file structure, with comments, is below:
 
 ```
-project
+project/
 │
 │   generate_report.py (Run this script to generate an interactive report)
 │
-└───input
+└───input/
 │   │   events.csv (Timestamped event list)
 │   │   channel_data.csv (Timestamped channel values)
 │   │   channel_metadata.json (Channel subsystems, units, etc.)
 │   │   fault_thresholds.json (Defined safety thresholds for each telemetry channel)
 │   │   state_transitions.csv (Timestamped entrance/exits for named states)
 │   │
-│   └───image_data
-│   │   │   image_metadata.csv (Timestamps for each image/video file)
+│   └───media_data/
+│   │   │   media_metadata.csv (Timestamps for each image/video file)
 │   │   │   mainCam001.png (Single image data product--filename is arbitrary)
 │   │   │   mainCam002.png
 │   │   │   sideCamL000.png
@@ -39,7 +39,7 @@ project
 │   │   │   sideCamF00.mp4
 │   │   └   ...
 │   │
-│   └───poses
+│   └───poses/
 │   │   │   main_poses.csv (Timestamped positions/orientations for object)
 │   │   |   static_objects.json (Positions/orientations/models to use for objects that never move)
 │   │   |   axes.json (Data for axis alignment)
@@ -48,15 +48,15 @@ project
 |   |   |   model_002.obj
 │   │   └   ...
 │   │
-│   └───customization
+│   └───customization/
 │       │   logo.png (Team/project logo)
 │       │   customization_metadata.json (Name of team, name of test, color scheme, visualization options, etc.)
 |       └   ...
 |
-└───output (Contains generated report after running generate_report.py)
+└───output/ (Contains generated report after running generate_report.py)
     │   index.html (Main page of report)
     │
-    └───content (Content needed to display report)
+    └───content/ (Content needed to display report)
 ```
 
 ## Report Components
