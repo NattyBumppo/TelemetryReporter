@@ -97,7 +97,7 @@ A visual summary showing state transitions over time can be shown, based on the 
 
 The telemetry channel data in **channel_data.csv** can be processed to render a visual summary of changing correlative state over time. An *undirected dependency graph* shows subgroups of highly correlated telemetry channels, indicating possible semantic connections between types of data.
 
-![Undirected dependency graph](readmeContent/undirected_positive_only.png)
+![Undirected dependency graph](readmeContent/undirected_graph_example.png)
 
 A *time curve plot* visualizes correlative state as a 2D embedding, allowing an operator to see sudden changes in intercorrelation between telemetry channels as movements in 2D space.
 
