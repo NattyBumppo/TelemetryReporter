@@ -61,6 +61,8 @@ project
 
 ## Report Components
 
+Below is a list of components that make up a telemetry report. Note that in an actual report, all or most of these components (which are shown below as examples, as they haven't been built yet) would live on the same page, and would be linked to each other. This would allow all of them to change accordingly when the user--for example--scrubs through the timeline.
+
 ### 2D Time Series Plots
 
 Channel telemetry listed in **channel_data.csv** can be visualized as line plots, with MATLAB's ```plot()``` command. Multiple channels can be selected and plotted on the same visualization, with the ability to scale axes and to scrub through the entirety of recorded telemetry. Channels can be filtered manually or by subsystem (if configured in **channel_metadata.json**). Channel fault thresholds can be shown if configured in **fault_thresholds.json**.
