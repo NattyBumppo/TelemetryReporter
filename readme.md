@@ -64,7 +64,7 @@ project
 
 Channel telemetry listed in **channel_data.csv** can be visualized as line plots, with MATLAB's ```plot()``` command. Multiple channels can be selected and plotted on the same visualization, with the ability to scale axes and to scrub through the entirety of recorded telemetry. Channels can be filtered manually or by subsystem (if configured in **channel_metadata.json**). Channel fault thresholds can be shown if configured in **fault_thresholds.json**.
 
-
+![Time series example](readmeContent/time_series_example.png)
 
 ### Mission Timeline Showing Events, State Transitions and Image Acquisitions
 
