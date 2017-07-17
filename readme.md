@@ -52,7 +52,7 @@ project
 |       └   ...
 |
 └───output (Contains generated report after running generate_report.py)
-│   │   index.html (Main page of report)
-│   │
-│   └───content (Content needed to display report)
+    │   index.html (Main page of report)
+    │
+    └───content (Content needed to display report)
 ```
