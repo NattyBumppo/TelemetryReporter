@@ -10,7 +10,7 @@ This is a tool to easily build interactive reports for telemetry captured during
 - State transitions
 - Position/orientation updates
 - Fault detection thresholds
-- Images
+- Images/videos
 
 When this telemetry data is supplied as input, the Telemetry Reporter tool will generate an interactive set of visualizations which make it possible to easily see the system's changing state over time, and to examine data looking for anomalies. Generated visualizations are customizable and can be uploaded to a server as web content and served out as interactive reports, making them easily sharable with other team members.
 
