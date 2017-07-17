@@ -96,6 +96,7 @@ The attitude (a.k.a. orientation) of the vehicle or system (defined in **main_po
 
 A visual summary showing state transitions over time can be shown, based on the data supplied in **state_transitions.csv**.
 
+![State diagram](readmeContent/state_diagram.png)
 
 ### Correlative Analysis (Experimental)
 

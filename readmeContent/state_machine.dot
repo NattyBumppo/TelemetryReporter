@@ -1,0 +1,15 @@
+digraph G {
+
+overlap=false;
+
+stopped->driving;
+driving->safemode;
+driving->planning;
+planning->driving;
+safemode->stopped;
+
+stopped [color="#7216B8" fontsize=8 label = <Stopped>];
+driving [color="#0016B8" fontsize=8 label = <Driving>];
+safemode [color="#42C208" fontsize=8 label = <Safe Mode>];
+planning [color="#C25628" fontsize=8 label = <Planning>];
+}
