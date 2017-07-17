@@ -71,7 +71,7 @@ Channel telemetry listed in **channel_data.csv** can be visualized as line plots
 
 ### Mission Timeline Showing Events, State Transitions and Image Acquisitions
 
-A full timeline of the mission can be shown, visualizing all of the events listed in **events.csv**, and showing running states transitions and/or sequence execution (listed in **state_transitions.csv**) as a [Gantt chart](https://en.wikipedia.org/wiki/Gantt_chart). Images and videos are also shown at the times they were acquired (as defined in **image_metadata.csv**).
+A full timeline of the mission can be shown, visualizing all of the events listed in **events.csv**, and showing running states transitions and/or sequence execution (listed in **state_transitions.csv**) as a [Gantt chart](https://en.wikipedia.org/wiki/Gantt_chart). Images and videos are also shown at the times they were acquired (as defined in **media_metadata.csv**).
 
 ![Event timeline](readmeContent/event_timeline.png)
 
