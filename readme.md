@@ -96,7 +96,7 @@ The 2D position of the vehicle or system (defined in **main_poses.csv**) is show
 
 ### Attitude Visualization (3D)
 
-The attitude (a.k.a. orientation) of the vehicle or system (defined in **main_poses.csv**) is shown over time. As the user scrubs through the Mission Timeline, the vehicle reorients accordingly. Euler angles are also shown. A 3D model can be supplied in **main_model.obj**.
+The attitude (a.k.a. orientation) of the vehicle or system (defined in **main_poses.csv**) is shown over time. As the user scrubs through the Mission Timeline, the vehicle reorients accordingly. Euler angles are also shown. A 3D model can be supplied in **main_model.obj**. Axes are configurable in **axes.json**.
 
 ![Attitude display](readmeContent/attitude_display.png)
 
