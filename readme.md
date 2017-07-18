@@ -12,11 +12,17 @@ This is a tool to easily build interactive reports for telemetry captured during
 - Fault detection thresholds
 - Images/videos
 
-When this telemetry data is supplied as input, the Telemetry Reporter tool will generate an interactive set of visualizations which make it possible to easily see the system's changing state over time, and to examine data looking for anomalies. Generated visualizations are customizable and can be uploaded to a server as web content and served out as interactive reports, making them easily sharable with other team members.
+When this data is supplied as input, the Telemetry Reporter tool will generate a set of visualizations which make it possible to easily see the system's changing state over time, and to examine data looking for anomalies. Generated visualizations are customizable and can be uploaded to a server as web content and served out as interactive reports. This makes them easily sharable with other team members.
+
+## Motivation
+
+Understanding telemetry is hard. Telemetered systems can have tons of types of data flooding in at impressively high data rates. Most visualization tools are either so general-purpose that they require tons of customization or repetitive actions to see the data at all (e.g., MATLAB), or so specialized that they're made to-order for the project at hand, wasting valuable engineering time and resources.
+
+This project attempts to solve this problem (at least, in many cases) by offering simple, customizable, interactive, and sharable telemetry visualizations, for free, to anyone who wants to understand their data better.
 
 ## File Structure
 
-Input files must be given specific names in order to be automatically ingested by the Telemetry Reporter tool. A sample file structure, with comments, is below:
+Input files must be given specific filenames in order to be automatically ingested by the Telemetry Reporter tool. A sample file structure, with comments, is below:
 
 ```
 project/
@@ -59,15 +65,15 @@ project/
     └───content/ (Content needed to display report)
 ```
 
-## Integrated Report
+## Integrated Report (Potential Design)
 
-The interactive telemetry report integrates a number of different interactive visualizations, so that data can be explored in a time-aware way. Scrubbing through the time selector to find a certain point in the test run shows changes across all of the visualizations simultaneously. One possible design combining a number of the report components (listed in the next section) is below:
+The interactive telemetry report integrates a number of different interactive visualizations, so that data can be explored in a time-aware way. Scrubbing through the time selector to find a certain point in time shows changes across all of the visualizations simultaneously. One possible design combining a number of the report components (listed in the next section) is below:
 
 ![Integrated report example](readmeContent/possible_integrated_design.png)
 
-## Report Components
+## Report Components (Potential Design)
 
-Below is a list of components that make up a telemetry report. Note that in an actual report, all or most of these components (which are shown below as examples, as they haven't been built yet) would live on the same page, and would be linked to each other. This would allow all of them to change accordingly when the user--for example--scrubs through the timeline.
+Below is a list of components that make up a telemetry report. Note that in an actual report, all or most of these components (which are shown below as possible designs, as they haven't been built yet) would live on the same page, and would be linked to each other. This would allow all of them to change accordingly when the user--for example--scrubs through the timeline.
 
 ### 2D Time Series Plots
 
@@ -117,3 +123,17 @@ A *time curve plot* visualizes correlative state as a 2D embedding, allowing an 
 ![Time curve](readmeContent/time_curve_example.png)
 
 See [this paper](readmeContent/nathaniel_guy_masters_thesis.pdf) for a detailed description of the analytic techniques used.
+
+## Feedback
+
+This tool is only in the design stage! We need feedback about the design from engineers who've worked on actual system development and operation. Please e-mail your feedback to <nattybumppo@gmail.com> or message the developer (Nat) via another channel. The questions we care about the most are:
+
+- What features of the tool seems the most useful for development work?
+- What features of the tool seems the least useful for development work?
+- Do any features seem like they might not be useful? Which ones, and why?
+- Are there any features that seem useful, but that you'd change in some way? Which ones, and how?
+- Is there anything you'd like for visualizing system state that isn't listed?
+- How are you currently analyzing telemetry for tests runs or operations?
+- Can you think of a time on a project when you wish you'd had something like this tool? Please describe what happened in as much detail as prudent.
+
+Thanks a lot!
