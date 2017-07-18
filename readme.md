@@ -59,6 +59,12 @@ project/
     └───content/ (Content needed to display report)
 ```
 
+## Integrated Report
+
+The interactive telemetry report integrates a number of different interactive visualizations, so that data can be explored in a time-aware way. Scrubbing through the time selector to find a certain point in the test run shows changes across all of the visualizations simultaneously. One possible design combining a number of the report components (listed in the next section) is below:
+
+![Integrated report example](readmeContent/possible_integrated_design.png)
+
 ## Report Components
 
 Below is a list of components that make up a telemetry report. Note that in an actual report, all or most of these components (which are shown below as examples, as they haven't been built yet) would live on the same page, and would be linked to each other. This would allow all of them to change accordingly when the user--for example--scrubs through the timeline.
