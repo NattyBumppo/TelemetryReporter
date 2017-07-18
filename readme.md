@@ -3,7 +3,7 @@ Telemetry Reporter
 
 ## Summary
 
-This is a tool to easily build interactive reports for telemetry captured during engineering tests and missions. The tool accepts a number of different types of vehicle/system telemetry, including:
+This is a tool to easily build interactive reports for telemetry captured during engineering tests and operations. The tool accepts a number of different types of vehicle/system telemetry, including:
 
 - Timestamped channel values
 - Event logs
@@ -81,9 +81,9 @@ Channel telemetry listed in **channel_data.csv** can be visualized as line plots
 
 ![Time series example](readmeContent/time_series_example.png)
 
-### Mission Timeline Showing Events, State Transitions and Image Acquisitions
+### Timeline Showing Events, State Transitions and Image Acquisitions
 
-A full timeline of the mission can be shown, visualizing all of the events listed in **events.csv**, and showing running states transitions and/or sequence execution (listed in **state_transitions.csv**) as a [Gantt chart](https://en.wikipedia.org/wiki/Gantt_chart). Images and videos are also shown at the times they were acquired (as defined in **media_metadata.csv**).
+A full timeline of the time period can be shown, visualizing all of the events listed in **events.csv**, and showing running states transitions and/or sequence execution (listed in **state_transitions.csv**) as a [Gantt chart](https://en.wikipedia.org/wiki/Gantt_chart). Images and videos are also shown at the times they were acquired (as defined in **media_metadata.csv**).
 
 ![Event timeline](readmeContent/event_timeline.png)
 
@@ -91,18 +91,18 @@ A full timeline of the mission can be shown, visualizing all of the events liste
 
 ### Position Visualization (2D)
 
-The 2D position of the vehicle or system (defined in **main_poses.csv**) is shown over time. As the user scrubs through the Mission Timeline, the vehicle moves through the visualization accordingly. Static objects (ones that maintain the same position/orientation throughout the time period) can be defined in **static_objects.json**, and models can be assigned to them as well. Axes are configurable in **axes.json**.
+The 2D position of the vehicle or system (defined in **main_poses.csv**) is shown over time. As the user scrubs through the Timeline, the vehicle moves through the visualization accordingly. Static objects (ones that maintain the same position/orientation throughout the time period) can be defined in **static_objects.json**, and models can be assigned to them as well. Axes are configurable in **axes.json**.
 
 ![Attitude display](readmeContent/positive_viz_2d.png)
 
 ### Position Visualization (3D)
 
-3D position and attitude of the vehicle or system over time can also be shown, based on data from **main_poses.csv**, with similar Mission Timeline integration as the 2D visualization.
+3D position and attitude of the vehicle or system over time can also be shown, based on data from **main_poses.csv**, with similar Timeline integration as the 2D visualization.
 
 
 ### Attitude Visualization (3D)
 
-The attitude (a.k.a. orientation) of the vehicle or system (defined in **main_poses.csv**) is shown over time. As the user scrubs through the Mission Timeline, the vehicle reorients accordingly. Euler angles are also shown. A 3D model can be supplied in **main_model.obj**. Axes are configurable in **axes.json**.
+The attitude (a.k.a. orientation) of the vehicle or system (defined in **main_poses.csv**) is shown over time. As the user scrubs through the Timeline, the vehicle reorients accordingly. Euler angles are also shown. A 3D model can be supplied in **main_model.obj**. Axes are configurable in **axes.json**.
 
 ![Attitude display](readmeContent/attitude_display.png)
 
