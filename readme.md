@@ -100,7 +100,7 @@ The 2D position of the vehicle or system (defined in **main_poses.csv**) is show
 3D position and attitude of the vehicle or system over time can also be shown, based on data from **main_poses.csv**, with similar Timeline integration as the 2D visualization.
 
 
-### Attitude Visualization (3D)
+### Attitude Visualization (2D/3D)
 
 The attitude (a.k.a. orientation) of the vehicle or system (defined in **main_poses.csv**) is shown over time. As the user scrubs through the Timeline, the vehicle reorients accordingly. Euler angles are also shown. A 3D model can be supplied in **main_model.obj**. Axes are configurable in **axes.json**.
 
@@ -123,6 +123,20 @@ A *time curve plot* visualizes correlative state as a 2D embedding, allowing an 
 ![Time curve](readmeContent/time_curve_example.png)
 
 See [this paper](readmeContent/nathaniel_guy_masters_thesis.pdf) for a detailed description of the analytic techniques used.
+
+## Component Implementation
+
+This space is only being used for brainstorming, as active development hasn't yet begun.
+
+- **2D Time Series Plots**: Need to use something like [boost.js](https://www.highcharts.com/articles/2-news/175-highcharts-performance-boost) to get the desired performance.
+- **Timelines**: [Highcharts timeline](http://jsfiddle.net/VenomXLR/u3eWz/) looks like a nice solution. The [timelines in vis.js](http://visjs.org/timeline_examples.html) are a bit more versatile and might be a better choice. Another option (looks okay, but less versatile than visjs) is [Google Charts Timelines](https://developers.google.com/chart/interactive/docs/gallery/timeline).
+- **Position Viz (2D)**: A custom implementation [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) is probably the right choice, so long as complexity is kept down.
+- **Position Viz (3D)**: A custom implementation in [three.js](https://threejs.org/) is probably the right choice, so long as complexity is kept down.
+- **Attitude Viz (2D/3D)**: A custom implementation in Canvas should be simple for 2D, or in three.js for 3D.
+- **State Diagram**: The [network examples in vis.js](http://visjs.org/network_examples.html) are a good fit for this.
+- **Correlative Analysis**: For the frontend, vis.js network stuff should be a very good fit for undirected dependency graphs, and time curves Canvas might be the right solution, or perhaps [D3.js](https://d3js.org/) if the number of points is manageable, or vis.js if the points are placed manually. For the backend correlative processing, Python with numpy is probably best in order to produce correlative state vectors (and possibly for performing [MDS](https://en.wikipedia.org/wiki/Multidimensional_scaling) to generate the 2D embedding after this).
+- **"Glue" tying together components**: Not yet sure of framework
+- **Other**: the [Google Charts Gauge](https://developers.google.com/chart/interactive/docs/gallery/gauge) component could be very intuitive for displaying certain types of telemetry; might be worth considering.
 
 ## Feedback
 
